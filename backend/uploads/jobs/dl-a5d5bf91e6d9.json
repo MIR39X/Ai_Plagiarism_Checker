@@ -1,0 +1,968 @@
+{
+    "source_file": "D:\\Semester 05\\DF_Project\\backend\/uploads\/upload_6928a1988eaf11.93405446_toCheck.docx",
+    "segments": [
+        {
+            "id": "seg-1",
+            "text": "Yeah \u2014 solid start. Your PHP is mostly okay and follows the right flow (save upload \u2192 call Python \u2192 call detector \u2192 return JSON). I ran a careful read and made a list of things to improve plus a safer, more production-ready version you can copy-paste.",
+            "tokens": 47,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-2",
+            "text": "Main issues & suggestions",
+            "tokens": 4,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.2
+        },
+        {
+            "id": "seg-3",
+            "text": "AI % calculation \u2014 you use average confidence (simple mean). Better to weight by tokens so long segments count more (recommended).",
+            "tokens": 21,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.4
+        },
+        {
+            "id": "seg-4",
+            "text": "Error handling \u2014 if the Python extractor fails or returns invalid JSON, you should catch that and return a clear error. Same for DeepSeek errors.",
+            "tokens": 25,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-5",
+            "text": "Validate uploaded file \u2014 check extension and max file size before moving.",
+            "tokens": 12,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-6",
+            "text": "Paths on Windows vs Linux \u2014 your pythonPath uses a Windows venv path. Make this configurable via .env and fallback to python3 on non-Windows.",
+            "tokens": 24,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-7",
+            "text": "Clamp \/ normalize confidences \u2014 ensure confidences are numeric and between 0\u20131.",
+            "tokens": 12,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.7
+        },
+        {
+            "id": "seg-8",
+            "text": "Persist download token mapping \u2014 download_token should map to the generated annotated file path (store mapping in a small JSON file or DB). Currently you generate a token but don\u2019t save the mapping.",
+            "tokens": 33,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-9",
+            "text": "Security \/ info leak \u2014 don\u2019t return internal file paths to the client. Good you didn\u2019t, but keep it in mind.",
+            "tokens": 21,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-10",
+            "text": "Timeouts \u2014 set_time_limit(300) might still be too small for big docs + API calls; consider async job pattern for heavy files.",
+            "tokens": 21,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.4
+        },
+        {
+            "id": "seg-11",
+            "text": "CORS \/ Response headers \u2014 you call Utils::allowCors() so OK \u2014 ensure content-type and proper error codes are used (you already use Utils::error \/ jsonResponse).",
+            "tokens": 25,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-12",
+            "text": "Below is a refactored version of your analyze.php with the above improvements:",
+            "tokens": 12,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-13",
+            "text": "Token-weighted AI% calculation.",
+            "tokens": 3,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.4
+        },
+        {
+            "id": "seg-14",
+            "text": "File type + size validation.",
+            "tokens": 5,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-15",
+            "text": "Python path from .env with fallback.",
+            "tokens": 6,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-16",
+            "text": "Defensive checks around PythonBridge and DeepSeekClient.",
+            "tokens": 6,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-17",
+            "text": "Save download_token \u2192 file mapping (simple JSON file inside uploads dir).",
+            "tokens": 11,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-18",
+            "text": "Cleaner rounding and normalized confidences.",
+            "tokens": 5,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.7
+        },
+        {
+            "id": "seg-19",
+            "text": "Copy this in place of your current file (adjust .env keys and paths if needed).",
+            "tokens": 15,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.4
+        },
+        {
+            "id": "seg-20",
+            "text": "<?phprequire_once dirname(__DIR__) . '\/src\/Utils.php';require_once dirname(__DIR__) . '\/src\/PythonBridge.php';require_once dirname(__DIR__) . '\/src\/DeepSeekClient.php';",
+            "tokens": 10,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.8
+        },
+        {
+            "id": "seg-21",
+            "text": "Utils::loadEnv(dirname(__DIR__) . '\/.env');Utils::allowCors();",
+            "tokens": 3,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.8
+        },
+        {
+            "id": "seg-22",
+            "text": "\/\/ Allow longer processing for larger documents\/API callsset_time_limit(600); \/\/ increased",
+            "tokens": 10,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.7
+        },
+        {
+            "id": "seg-23",
+            "text": "if ($_SERVER['REQUEST_METHOD'] !== 'POST') {",
+            "tokens": 5,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-24",
+            "text": "Utils::error('Only POST is allowed', 405);",
+            "tokens": 5,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-25",
+            "text": "}",
+            "tokens": 1,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-26",
+            "text": "if (!isset($_FILES['file'])) {",
+            "tokens": 3,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-27",
+            "text": "Utils::error('Missing file upload', 400);",
+            "tokens": 4,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-28",
+            "text": "}",
+            "tokens": 1,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-29",
+            "text": "$upload = $_FILES['file'];if (!isset($upload['tmp_name']) || $upload['error'] !== UPLOAD_ERR_OK) {",
+            "tokens": 9,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-30",
+            "text": "Utils::error('File upload failed', 400, ['code' => $upload['error'] ? ? null]);",
+            "tokens": 10,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-31",
+            "text": "}",
+            "tokens": 1,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-32",
+            "text": "\/\/ Basic validation: extension and size$allowedExt = ['pdf', 'docx'];$maxBytes = (int) (Utils::env('MAX_UPLOAD_MB', 20) * 1024 * 1024); \/\/ default 20 MB",
+            "tokens": 21,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-33",
+            "text": "$origName = $upload['name'];$ext = strtolower(pathinfo($origName, PATHINFO_EXTENSION));if (!in_array($ext, $allowedExt)) {",
+            "tokens": 9,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-34",
+            "text": "Utils::error('Unsupported file type. Only PDF and DOCX allowed', 400);",
+            "tokens": 9,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-35",
+            "text": "}if ($upload['size'] > $maxBytes) {",
+            "tokens": 5,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-36",
+            "text": "Utils::error('File too large', 413);",
+            "tokens": 4,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-37",
+            "text": "}",
+            "tokens": 1,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-38",
+            "text": "$segmentTokens = isset($_POST['segment_tokens']) ? (int) $_POST['segment_tokens'] : 80;$threshold = isset($_POST['threshold']) ? (float) $_POST['threshold'] : 0.65;$threshold = max(0.0, min(1.0, $threshold));",
+            "tokens": 19,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-39",
+            "text": "$uploadsDir = dirname(__DIR__) . '\/uploads';Utils::ensureDir($uploadsDir);",
+            "tokens": 5,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-40",
+            "text": "\/\/ make safe and unique filename$safeName = preg_replace('\/[^a-zA-Z0-9._-]\/', '_', basename($origName));$storedPath = $uploadsDir . '\/' . uniqid('upload_', true) . '_' . $safeName;",
+            "tokens": 21,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.7
+        },
+        {
+            "id": "seg-41",
+            "text": "if (!move_uploaded_file($upload['tmp_name'], $storedPath)) {",
+            "tokens": 4,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-42",
+            "text": "Utils::error('Failed to store uploaded file', 500);",
+            "tokens": 6,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-43",
+            "text": "}",
+            "tokens": 1,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-44",
+            "text": "\/\/ Python path from env with fallback$pythonPathEnv = Utils::env('PYTHON_PATH', '');if ($pythonPathEnv && file_exists($pythonPathEnv)) {",
+            "tokens": 14,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-45",
+            "text": "$pythonPath = $pythonPathEnv;",
+            "tokens": 3,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-46",
+            "text": "} else {",
+            "tokens": 3,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-47",
+            "text": "\/\/ fallback (works on Linux with python3) - on Windows set PYTHON_PATH in .env",
+            "tokens": 14,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-48",
+            "text": "$pythonPath = Utils::isWindows() ? null : 'python3';",
+            "tokens": 7,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-49",
+            "text": "if ($pythonPath === null) {",
+            "tokens": 5,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-50",
+            "text": "Utils::error('Python path not configured for Windows. Set PYTHON_PATH in .env', 500);",
+            "tokens": 11,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-51",
+            "text": "}",
+            "tokens": 1,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-52",
+            "text": "}",
+            "tokens": 1,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-53",
+            "text": "\/\/ call python extractor (defensive)$python = new PythonBridge($pythonPath);try {",
+            "tokens": 9,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-54",
+            "text": "$extracted = $python->extract($storedPath, $segmentTokens);",
+            "tokens": 4,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-55",
+            "text": "} catch (Exception $e) {",
+            "tokens": 5,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-56",
+            "text": "\/\/ clean up uploaded file if needed",
+            "tokens": 7,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-57",
+            "text": "\/\/unlink($storedPath);",
+            "tokens": 1,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-58",
+            "text": "Utils::error('Python extractor failed: ' . $e->getMessage(), 500);",
+            "tokens": 7,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-59",
+            "text": "}",
+            "tokens": 1,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-60",
+            "text": "if (!is_array($extracted) || !isset($extracted['segments'])) {",
+            "tokens": 5,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-61",
+            "text": "Utils::error('Extractor returned invalid data', 500, ['raw' => $extracted]);",
+            "tokens": 8,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-62",
+            "text": "}",
+            "tokens": 1,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-63",
+            "text": "$segments = $extracted['segments'] ? ? [];$totalTokens = $extracted['total_tokens'] ? ? array_reduce($segments, function($c, $s){ return $c + (int)($s['tokens'] ? ? 0); }, 0);",
+            "tokens": 22,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-64",
+            "text": "if (count($segments) === 0) {",
+            "tokens": 5,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-65",
+            "text": "Utils::error('No text extracted from document', 400);",
+            "tokens": 6,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-66",
+            "text": "}",
+            "tokens": 1,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-67",
+            "text": "\/\/ Score segments via DeepSeek (wrap errors)$detector = new DeepSeekClient();try {",
+            "tokens": 11,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-68",
+            "text": "\/\/ detector->scoreSegments expected to add 'confidence' key to each segment",
+            "tokens": 10,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-69",
+            "text": "$scoredSegments = $detector->scoreSegments($segments);",
+            "tokens": 3,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-70",
+            "text": "} catch (Exception $e) {",
+            "tokens": 5,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-71",
+            "text": "Utils::error('Detection service failed: ' . $e->getMessage(), 502);",
+            "tokens": 7,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-72",
+            "text": "}",
+            "tokens": 1,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-73",
+            "text": "\/\/ Normalize and validate confidences; ensure tokens field exists$scoredSegments = array_map(function($seg) {",
+            "tokens": 12,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-74",
+            "text": "$seg['tokens'] = isset($seg['tokens']) ? (int) $seg['tokens'] : max(1, str_word_count($seg['text'] ? ? ''));",
+            "tokens": 12,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-75",
+            "text": "$conf = isset($seg['confidence']) ? floatval($seg['confidence']) : 0.0;",
+            "tokens": 7,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-76",
+            "text": "\/\/ clamp",
+            "tokens": 2,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-77",
+            "text": "$seg['confidence'] = max(0.0, min(1.0, $conf));",
+            "tokens": 5,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-78",
+            "text": "\/\/ round for nicer JSON",
+            "tokens": 5,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-79",
+            "text": "$seg['confidence'] = round($seg['confidence'], 4);",
+            "tokens": 4,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-80",
+            "text": "return $seg;",
+            "tokens": 2,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-81",
+            "text": "}, $scoredSegments);",
+            "tokens": 2,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-82",
+            "text": "\/\/ Compute weighted AI percent by tokens$totalTokensForWeight = array_reduce($scoredSegments, function($carry, $s) { return $carry + ($s['tokens'] ? ? 0); }, 0);if ($totalTokensForWeight <= 0) $totalTokensForWeight = 1;",
+            "tokens": 27,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-83",
+            "text": "$weightedSum = array_reduce($scoredSegments, function($carry, $s) {",
+            "tokens": 6,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-84",
+            "text": "return $carry + (($s['tokens'] ? ? 0) * ($s['confidence'] ? ? 0.0));",
+            "tokens": 12,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-85",
+            "text": "}, 0.0);",
+            "tokens": 2,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-86",
+            "text": "$aiPercent = round(100.0 * ($weightedSum \/ $totalTokensForWeight), 2);",
+            "tokens": 8,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-87",
+            "text": "\/\/ create tokens and job ids$jobId = Utils::makeToken('job');$downloadToken = Utils::makeToken('dl');",
+            "tokens": 10,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-88",
+            "text": "\/\/ persist download mapping (simple JSON map file) so \/download can lookup$downloadMapFile = $uploadsDir . '\/download_map.json';$downloadTargetPath = null; \/\/ actual annotated file path will be created later by annotator$map = [];if (file_exists($downloadMapFile)) {",
+            "tokens": 33,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-89",
+            "text": "$raw = @file_get_contents($downloadMapFile);",
+            "tokens": 3,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-90",
+            "text": "$map = $raw ? json_decode($raw, true) : [];",
+            "tokens": 8,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-91",
+            "text": "}$map[$downloadToken] = [",
+            "tokens": 3,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-92",
+            "text": "'original' => $storedPath,",
+            "tokens": 3,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-93",
+            "text": "'annotated' => null, \/\/ to be filled once annotator runs",
+            "tokens": 10,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-94",
+            "text": "'created_at' => time()",
+            "tokens": 3,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-95",
+            "text": "];",
+            "tokens": 1,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-96",
+            "text": "@file_put_contents($downloadMapFile, json_encode($map, JSON_PRETTY_PRINT));",
+            "tokens": 3,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-97",
+            "text": "\/\/ mark is_ai by threshold$segmentsOut = array_map(function ($seg) use ($threshold) {",
+            "tokens": 11,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-98",
+            "text": "$seg['is_ai'] = (($seg['confidence'] ? ? 0.0) >= $threshold);",
+            "tokens": 8,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-99",
+            "text": "return $seg;",
+            "tokens": 2,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-100",
+            "text": "}, $scoredSegments);",
+            "tokens": 2,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-101",
+            "text": "\/\/ response$response = [",
+            "tokens": 4,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-102",
+            "text": "'job_id' => $jobId,",
+            "tokens": 3,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-103",
+            "text": "'ai_percent' => $aiPercent,",
+            "tokens": 3,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-104",
+            "text": "'total_tokens' => $totalTokensForWeight,",
+            "tokens": 3,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-105",
+            "text": "'num_segments' => count($segmentsOut),",
+            "tokens": 3,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-106",
+            "text": "'threshold' => $threshold,",
+            "tokens": 3,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-107",
+            "text": "'segments' => $segmentsOut,",
+            "tokens": 3,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-108",
+            "text": "'download_token' => $downloadToken,",
+            "tokens": 3,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-109",
+            "text": "];",
+            "tokens": 1,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-110",
+            "text": "Utils::jsonResponse($response);",
+            "tokens": 1,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-111",
+            "text": "A few final notes for your repo",
+            "tokens": 7,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-112",
+            "text": "Add PYTHON_PATH to .env on Windows (e.g. C:\\xampp\\php\\php.exe for php? no\u2014point to C:\\path\\to\\python.exe). On Linux use python3 by default.",
+            "tokens": 19,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.4
+        },
+        {
+            "id": "seg-113",
+            "text": "Implement \/download to read uploads\/download_map.json, check annotated field and serve annotated file or return 404 if not generated; optionally kick annotator to produce annotated file on-demand.",
+            "tokens": 26,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-114",
+            "text": "Consider adding a small background job \/ queue if you expect big PDFs \u2014 synchronous HTTP may time out.",
+            "tokens": 19,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-115",
+            "text": "Log errors (Utils::logger or error_log) \u2014 helps debugging when extractor or detector fail.",
+            "tokens": 13,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-116",
+            "text": "Add unit tests \/ sample files in examples\/ for reproducible testing.",
+            "tokens": 11,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.4
+        },
+        {
+            "id": "seg-117",
+            "text": "If you want I can:",
+            "tokens": 5,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-118",
+            "text": "generate a matching improved PythonBridge.php or DeepSeekClient.php to match this flow,",
+            "tokens": 11,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.4
+        },
+        {
+            "id": "seg-119",
+            "text": "or create a simple \/download.php that looks up the download_map.json and streams annotated files.",
+            "tokens": 14,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.4
+        },
+        {
+            "id": "seg-120",
+            "text": "Which one do you want next?",
+            "tokens": 6,
+            "page": null,
+            "bbox": null,
+            "confidence": 0.3
+        }
+    ],
+    "ai_percent": 53.83,
+    "threshold": 0.5,
+    "created_at": 1764270522
+}

@@ -1,0 +1,1308 @@
+{
+    "source_file": "D:\\Semester 05\\DF_Project\\backend\/uploads\/upload_6928a14e403835.30084000_sample.pdf",
+    "segments": [
+        {
+            "id": "seg-1",
+            "text": "CHAPTER ONE",
+            "tokens": 2,
+            "page": 0,
+            "bbox": [
+                72,
+                72.509765625,
+                159.6719970703125,
+                85.798828125
+            ],
+            "confidence": 0.1
+        },
+        {
+            "id": "seg-2",
+            "text": "INTRODUCTION",
+            "tokens": 1,
+            "page": 0,
+            "bbox": [
+                72,
+                100.30859375,
+                168,
+                113.59765625
+            ],
+            "confidence": 0.1
+        },
+        {
+            "id": "seg-3",
+            "text": "1.1 BACKGROUND OF THE STUDY",
+            "tokens": 5,
+            "page": 0,
+            "bbox": [
+                72,
+                128.107421875,
+                269.676025390625,
+                141.396484375
+            ],
+            "confidence": 0.1
+        },
+        {
+            "id": "seg-4",
+            "text": "The physical nature of this task has made it a bit slow and makes it difficult for progress and \nmilestone to be monitored. As such, a computerized system is hypothetically a good way to \nspeed up this process to be more effective and efficient.",
+            "tokens": 44,
+            "page": 0,
+            "bbox": [
+                72,
+                155.90625,
+                518.940185546875,
+                196.79296875
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-5",
+            "text": "In this project, there will be a software design which can operate with features such as data \ncollection, storage, and retrieval. In summary, we build a web application with the basic features \nand the interaction between them and then allow it to be used as a basis for more industry level \nsoftware we can find.",
+            "tokens": 55,
+            "page": 0,
+            "bbox": [
+                72,
+                211.302734375,
+                538.9080200195312,
+                265.98828125
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-6",
+            "text": "1.2 STATEMENT OF THE PROBLEM",
+            "tokens": 5,
+            "page": 0,
+            "bbox": [
+                72,
+                280.498046875,
+                277.03204345703125,
+                293.787109375
+            ],
+            "confidence": 0.1
+        },
+        {
+            "id": "seg-7",
+            "text": "The proposed implementation seeks to understand the learning and instruction methods and \nproject that understanding in the form of a software. There will be some key considerations that \nwill be taken during the implementation of this idea. These considerations include",
+            "tokens": 40,
+            "page": 0,
+            "bbox": [
+                72,
+                308.296875,
+                534.251953125,
+                349.18359375
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-8",
+            "text": "\uf0b7\nA good User Interface and User Experience\n\uf0b7\nA lesson level tracking feature to monitor progress in particular lessons under the topic of \noperating systems. \uf0b7\nFeedback mechanisms.",
+            "tokens": 29,
+            "page": 0,
+            "bbox": [
+                90,
+                363.693359375,
+                541.5960693359375,
+                418.37890625
+            ],
+            "confidence": 0.2
+        },
+        {
+            "id": "seg-9",
+            "text": "1.3 MOTIVATION OF THE STUDY",
+            "tokens": 5,
+            "page": 0,
+            "bbox": [
+                72,
+                432.888671875,
+                263.0160217285156,
+                446.177734375
+            ],
+            "confidence": 0.1
+        },
+        {
+            "id": "seg-10",
+            "text": "The study has its motivations in the fact of the ICT industry being a key part of our everyday life \nespecially in the 21st century. An operating system e-learning platform will help digitize the \neducation sector and especially in the field of computer science and information technology.",
+            "tokens": 47,
+            "page": 0,
+            "bbox": [
+                72,
+                460.6875,
+                539.9400024414062,
+                501.57421875
+            ],
+            "confidence": 0.2
+        },
+        {
+            "id": "seg-11",
+            "text": "1.4 AIM AND OBJECTIVES OF THE STUDY",
+            "tokens": 7,
+            "page": 0,
+            "bbox": [
+                72,
+                516.083984375,
+                314.3520202636719,
+                529.373046875
+            ],
+            "confidence": 0.1
+        },
+        {
+            "id": "seg-12",
+            "text": "The aim of the study is to build a web application system which would be effective in storing \ndata and offering instruction in particular subject matter.",
+            "tokens": 26,
+            "page": 0,
+            "bbox": [
+                72,
+                543.8828125,
+                522.6240844726562,
+                570.970703125
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-13",
+            "text": "The objectives include:",
+            "tokens": 3,
+            "page": 0,
+            "bbox": [
+                72,
+                585.48046875,
+                183.9840087890625,
+                598.76953125
+            ],
+            "confidence": 0.1
+        },
+        {
+            "id": "seg-14",
+            "text": "1. An extensive study of the literature around the implementations of various online",
+            "tokens": 13,
+            "page": 0,
+            "bbox": [
+                90,
+                613.279296875,
+                501.2881164550781,
+                626.568359375
+            ],
+            "confidence": 0.2
+        },
+        {
+            "id": "seg-15",
+            "text": "learning platforms. 2. Identifying the key areas of operation in related e-learning projects where improvement is",
+            "tokens": 16,
+            "page": 0,
+            "bbox": [
+                90,
+                627.078125,
+                542.2320556640625,
+                654.166015625
+            ],
+            "confidence": 0.2
+        },
+        {
+            "id": "seg-16",
+            "text": "needed.",
+            "tokens": 1,
+            "page": 0,
+            "bbox": [
+                108,
+                654.67578125,
+                144.9840087890625,
+                667.96484375
+            ],
+            "confidence": 0.2
+        },
+        {
+            "id": "seg-17",
+            "text": "\uf0b7\nDesign of systems with the potential of proffering solutions to those areas identified in \n(ii) above.",
+            "tokens": 17,
+            "page": 0,
+            "bbox": [
+                90,
+                682.474609375,
+                526.632080078125,
+                709.5625
+            ],
+            "confidence": 0.2
+        },
+        {
+            "id": "seg-18",
+            "text": "1. Implementation of the designs in (iii) above and providing recommendations for the",
+            "tokens": 13,
+            "page": 1,
+            "bbox": [
+                90,
+                72.509765625,
+                514.6201171875,
+                85.798828125
+            ],
+            "confidence": 0.2
+        },
+        {
+            "id": "seg-19",
+            "text": "future.",
+            "tokens": 1,
+            "page": 1,
+            "bbox": [
+                108,
+                86.30859375,
+                139.656005859375,
+                99.59765625
+            ],
+            "confidence": 0.2
+        },
+        {
+            "id": "seg-20",
+            "text": "1.5 SCOPE OF THE STUDY",
+            "tokens": 5,
+            "page": 1,
+            "bbox": [
+                72,
+                114.107421875,
+                221.68801879882812,
+                127.396484375
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-21",
+            "text": "The scope of the study is a typical online learning application platform. It will have up to 10 \nlessons on basic operating system concepts as a test run prototype. This reduced scope is due to \nthe time constraints as well as the tedious nature of implementing such a software for an entire \ncurriculum.",
+            "tokens": 53,
+            "page": 1,
+            "bbox": [
+                72,
+                141.90625,
+                533.26806640625,
+                196.591796875
+            ],
+            "confidence": 0.2
+        },
+        {
+            "id": "seg-22",
+            "text": "In pursuing a computer science degree, a clear understanding of operating systems and the \nalgorithms around them is needed. It is one of the frameworks on which other computer science \nknowledge is based on. Over time, the instruction of courses like this in the university has been \nthrough physical or software document handouts.",
+            "tokens": 53,
+            "page": 1,
+            "bbox": [
+                72,
+                211.1015625,
+                534.9119262695312,
+                269.0643310546875
+            ],
+            "confidence": 0.2
+        },
+        {
+            "id": "seg-23",
+            "text": "1.6 SIGNIFICANCE OF THE STUDY",
+            "tokens": 5,
+            "page": 1,
+            "bbox": [
+                72,
+                284.66650390625,
+                270.3480224609375,
+                297.95556640625
+            ],
+            "confidence": 0.2
+        },
+        {
+            "id": "seg-24",
+            "text": "The significance is such that the study can be added to a long list of research papers that can be \nreferred to, to imbibe the culture of automated systems into our daily educational operations in \nparticular, the operations of learning institutions.",
+            "tokens": 41,
+            "page": 1,
+            "bbox": [
+                72,
+                312.46533203125,
+                531.8999633789062,
+                353.35205078125
+            ],
+            "confidence": 0.2
+        },
+        {
+            "id": "seg-25",
+            "text": "1.7 OPERATIONAL DEFINITION OF TERMS",
+            "tokens": 5,
+            "page": 1,
+            "bbox": [
+                72,
+                367.86181640625,
+                320.35205078125,
+                381.15087890625
+            ],
+            "confidence": 0.1
+        },
+        {
+            "id": "seg-26",
+            "text": "1. E-LEARNING: E-learning refers to electronic learning and is a method of delivery of all",
+            "tokens": 15,
+            "page": 1,
+            "bbox": [
+                90,
+                395.66064453125,
+                537.9000244140625,
+                408.94970703125
+            ],
+            "confidence": 0.1
+        },
+        {
+            "id": "seg-27",
+            "text": "or part of a course digitally through the aid of a computer. 2. EDUCATION: This a process by which instruction ins given especially at a school or",
+            "tokens": 27,
+            "page": 1,
+            "bbox": [
+                90,
+                409.45947265625,
+                522.6121826171875,
+                436.54736328125
+            ],
+            "confidence": 0.1
+        },
+        {
+            "id": "seg-28",
+            "text": "university. 3. DISTANCE EDUCATION: Distance Education is defined as instruction between a",
+            "tokens": 12,
+            "page": 1,
+            "bbox": [
+                90,
+                437.05712890625,
+                511.9320983886719,
+                464.14501953125
+            ],
+            "confidence": 0.1
+        },
+        {
+            "id": "seg-29",
+            "text": "teacher and students when they are separated by physical distance and communication is \naccomplished by one or more technological media (American Association of University \nProfessors, 2007; Oregon Network for Education, 2000). 4. ONLINE LEARNING: Online learning simply refers to learning that takes place over the",
+            "tokens": 45,
+            "page": 1,
+            "bbox": [
+                90,
+                464.65478515625,
+                540.912109375,
+                519.34033203125
+            ],
+            "confidence": 0.1
+        },
+        {
+            "id": "seg-30",
+            "text": "internet. 5. COMPUTER AIDED INSTRUCTION: What is computer-assisted instruction?",
+            "tokens": 9,
+            "page": 1,
+            "bbox": [
+                90,
+                519.85009765625,
+                492.3000793457031,
+                546.93798828125
+            ],
+            "confidence": 0.1
+        },
+        {
+            "id": "seg-31",
+            "text": "\u201cComputer-assisted instruction\u201d (CAI) refers to instruction or remediation presented on a \ncomputer\n6. CURRICULUM: A curriculum is a collection of lessons and assessments that a will be",
+            "tokens": 27,
+            "page": 1,
+            "bbox": [
+                90,
+                547.44775390625,
+                539.592041015625,
+                588.33447265625
+            ],
+            "confidence": 0.1
+        },
+        {
+            "id": "seg-32",
+            "text": "taught in an educational institution by a teacher. 7. ONLINE SYSTEMS: Online systems are systems where the input data enter the",
+            "tokens": 21,
+            "page": 1,
+            "bbox": [
+                90,
+                588.84423828125,
+                496.6201171875,
+                615.93212890625
+            ],
+            "confidence": 0.1
+        },
+        {
+            "id": "seg-33",
+            "text": "computer directly from the point of origin (usually a terminal or workstation) and\/or in \nwhich output data are transmitted directly to that terminal point of origin",
+            "tokens": 26,
+            "page": 1,
+            "bbox": [
+                108,
+                616.44189453125,
+                527.9521484375,
+                643.52978515625
+            ],
+            "confidence": 0.1
+        },
+        {
+            "id": "seg-34",
+            "text": "1.8 OUTLINE OF METHODOLOGY",
+            "tokens": 4,
+            "page": 2,
+            "bbox": [
+                72,
+                72.509765625,
+                267.3600158691406,
+                85.798828125
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-35",
+            "text": "The implementation of this idea and project would be achieved using server-side programming \nlanguage PHP and the MySQL database querying language. These languages were chosen for \ntheir server-side compatibility,",
+            "tokens": 29,
+            "page": 2,
+            "bbox": [
+                72,
+                100.30859375,
+                530.927978515625,
+                141.1953125
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-36",
+            "text": "Their high level of security and for the general web compatibility. The front-end technologies \nused include HTML, CSS, and JavaScript. This will also be hosted as a web application on an \nonline domain.",
+            "tokens": 33,
+            "page": 2,
+            "bbox": [
+                72,
+                155.705078125,
+                525.9600830078125,
+                196.591796875
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-37",
+            "text": "1.9 ORGANISATION OF THE PROJECT",
+            "tokens": 5,
+            "page": 2,
+            "bbox": [
+                72,
+                211.1015625,
+                292.3559875488281,
+                224.390625
+            ],
+            "confidence": 0.1
+        },
+        {
+            "id": "seg-38",
+            "text": "The project is organized such that; Chapter One gives a brief introduction in form of the \nBackground of the Study of a general overview of the concept of e-learning worldwide. In \nChapter Two, we have a broad look at the related implementations of e-learning information \nsystems. Chapter Three examines the System Architecture, the system design and analysis. Chapter Four presents the implementation of the project using necessary programming languages \nand development models.",
+            "tokens": 72,
+            "page": 2,
+            "bbox": [
+                72,
+                238.900390625,
+                541.9320068359375,
+                334.982421875
+            ],
+            "confidence": 0.2
+        },
+        {
+            "id": "seg-39",
+            "text": "It also presents the result of testing carried out. Chapter Five rounds \noff the project work with the summary, conclusions, and recommendations for future works.",
+            "tokens": 25,
+            "page": 2,
+            "bbox": [
+                72,
+                238.900390625,
+                541.9320068359375,
+                334.982421875
+            ],
+            "confidence": 0.2
+        },
+        {
+            "id": "seg-40",
+            "text": "SAMPLE #2",
+            "tokens": 2,
+            "page": 2,
+            "bbox": [
+                268.0810546875,
+                349.5771484375,
+                343.9190673828125,
+                365.0810546875
+            ],
+            "confidence": 0.1
+        },
+        {
+            "id": "seg-41",
+            "text": "Design and Implementation of Biometric-Based Attendance Management System",
+            "tokens": 8,
+            "page": 2,
+            "bbox": [
+                72,
+                379.5908203125,
+                486.9599609375,
+                392.8798828125
+            ],
+            "confidence": 0.1
+        },
+        {
+            "id": "seg-42",
+            "text": "ABSTRACT",
+            "tokens": 1,
+            "page": 2,
+            "bbox": [
+                72,
+                407.3896484375,
+                137.33999633789062,
+                420.6787109375
+            ],
+            "confidence": 0.1
+        },
+        {
+            "id": "seg-43",
+            "text": "Biometric technology is a method for identifying a person solely based on the attributes that \nmake them that person. This method is becoming more popular, especially in higher education, \nwhere impersonation is occurring at an alarmingly high rate. Using characteristics \nlike fingerprint, face, iris, and palm print, the technology effectively answers the identification \nissue. The major goal of this research is to create a fingerprint identification Imo State university \nenrolled students and to monitor their attendance in lectures and exams.",
+            "tokens": 80,
+            "page": 2,
+            "bbox": [
+                72,
+                435.1884765625,
+                539.9400024414062,
+                710.6552734375
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-44",
+            "text": "As a result of this \nresearch, a system was created and configured to work properly with a biometric device. Dot net \nframework was used in the creation of the platform. All of the interactive interfaces were coded \nin visual basic.net, with the database running on SQL server 2008 as the back-end. The System \nUsability Scale technique was used to measure the produced system\u2019s usability efficiency in \nterms of usability (SUS).",
+            "tokens": 70,
+            "page": 2,
+            "bbox": [
+                72,
+                435.1884765625,
+                539.9400024414062,
+                710.6552734375
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-45",
+            "text": "To assess the system\u2019s usability, the researchers had 60 students \nnavigate through the system and then react to a questionnaire based on their experiences. The \nSUS technique of assessing the system\u2019s usability yielded an overall score of 82.7%. Because of \nthis, the system proved to be very accurate, dependable, and safe for storing student biometric \ndata, and it prevents unauthorized users from accessing it.",
+            "tokens": 64,
+            "page": 2,
+            "bbox": [
+                72,
+                435.1884765625,
+                539.9400024414062,
+                710.6552734375
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-46",
+            "text": "As a result, it was determined that this \nmethod is crucial for preventing student impersonation and maintaining accurate student \ninformation. As a result, it\u2019s impossible to overstate the system\u2019s applicability and scholarly \nsignificance. As a result, in order to put a stop to the many instances of impersonation in lectures \nand tests at educational institutions. Akwa Ibom State University, in particular, may use the \ntechnology created in this research to completely eliminate this threat.",
+            "tokens": 74,
+            "page": 2,
+            "bbox": [
+                72,
+                435.1884765625,
+                539.9400024414062,
+                710.6552734375
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-47",
+            "text": "CHAPTER ONE",
+            "tokens": 2,
+            "page": 3,
+            "bbox": [
+                72,
+                72.509765625,
+                154.33201599121094,
+                85.798828125
+            ],
+            "confidence": 0.1
+        },
+        {
+            "id": "seg-48",
+            "text": "INTRODUCTION",
+            "tokens": 1,
+            "page": 3,
+            "bbox": [
+                72,
+                100.30859375,
+                162.64801025390625,
+                113.59765625
+            ],
+            "confidence": 0.1
+        },
+        {
+            "id": "seg-49",
+            "text": "1.1         Background to the Study",
+            "tokens": 5,
+            "page": 3,
+            "bbox": [
+                72,
+                128.107421875,
+                233.66400146484375,
+                141.396484375
+            ],
+            "confidence": 0.1
+        },
+        {
+            "id": "seg-50",
+            "text": "Student Identification and Tracking using Biometric Identification Systems are becoming \nincreasingly important in the education industry to accurately identify and track pupils. Standard \nstudent attendance monitoring systems such as roll call have limits and inconsistencies [1]. Because these solutions are more precise, quicker, more practical, and a more valuable \nmechanism for maintaining students\u2019 credentials and security, academic institutions increasingly \nneed biometric student monitoring systems.",
+            "tokens": 64,
+            "page": 3,
+            "bbox": [
+                72,
+                155.90625,
+                541.248046875,
+                334.78125
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-51",
+            "text": "It has been reported that conventional student \nidentification and presence techniques such as roll call or paper-based attendance are out of date \nand result in academics and supervisors spending excessive time recording student track. Manual \nmonitoring is also challenging when dealing with huge classes of kids. As a result, current \nmonitoring systems have flaws that make it impossible to guard against issues like proxy \nattendance, Identity card theft, impersonator, and monitoring mistakes that directly impact \neducational quality [2].",
+            "tokens": 78,
+            "page": 3,
+            "bbox": [
+                72,
+                155.90625,
+                541.248046875,
+                334.78125
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-52",
+            "text": "Students may check-in and exit swiftly and efficiently with the use of \nbiometric identification technologies, according to Manoharan et al. [3]",
+            "tokens": 21,
+            "page": 3,
+            "bbox": [
+                72,
+                155.90625,
+                541.248046875,
+                334.78125
+            ],
+            "confidence": 0.2
+        },
+        {
+            "id": "seg-53",
+            "text": "To assure identification accuracy, avoid mistakes, and eradicate proxy attendance and in the \ninstance of identical twins, biometric technology makes use of \u2018s physiological and biometric \ntraits (which are different for each individual). As a result of biometric technology\u2019s strong \nencryption, pupils are protected against identity theft. According to Thomas et al [4], Biometric \nattendance systems have improved capturing and monitoring student attendance accuracy.",
+            "tokens": 64,
+            "page": 3,
+            "bbox": [
+                72,
+                349.291015625,
+                542.9024658203125,
+                541.96484375
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-54",
+            "text": "When \na biometric attendance machine records a different physiological characteristic like a hand or \nfingerprint, an iris pattern, or even a voice recording, it serves as a record for identity \nverification, allowing the validated individual to carry out the work as permitted. Biometric \nattendance devices also keep track of the work schedules of workers, such as who did what and \nwhen, and so on. Biometric attendance machines are becoming more popular.",
+            "tokens": 71,
+            "page": 3,
+            "bbox": [
+                72,
+                349.291015625,
+                542.9024658203125,
+                541.96484375
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-55",
+            "text": "To assure the \naccuracy of attendance, biometric attendance systems utilize failsafe technology like fingerprints. These systems are especially effective when dealing with huge numbers of workers or students. It gives administrators an easy method to keep track of both personnel and student absences as an \nadded benefit.",
+            "tokens": 47,
+            "page": 3,
+            "bbox": [
+                72,
+                349.291015625,
+                542.9024658203125,
+                541.96484375
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-56",
+            "text": "For example, fingerprint, face, iris, and retinal pattern recognition are all examples of biometrics \nthat may be used to authenticate an individual\u2019s identification. These physical data approaches \nare garnering attention as a personal identification method that is more convenient than standard \nmethods such as passwords or ID cards since they employ measurement data and such data is \nunique to the individual and stays so throughout one\u2019s lifetime [5].",
+            "tokens": 68,
+            "page": 3,
+            "bbox": [
+                72,
+                556.474609375,
+                542.916015625,
+                707.751953125
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-57",
+            "text": "Testing, evaluation, and \naccreditation are all made possible by examination as a tool. However, students must first meet a \nspecified percentage of class attendance requirements in most institutions before sitting for an \nexamination [6]. However, because of the strain of manually taking attendance and keeping \nrecords, many institutions in developing nations have failed to meet this requirement.",
+            "tokens": 57,
+            "page": 3,
+            "bbox": [
+                72,
+                556.474609375,
+                542.916015625,
+                707.751953125
+            ],
+            "confidence": 0.2
+        },
+        {
+            "id": "seg-58",
+            "text": "Most \ndeveloping nation universities still utilize pen and paper to keep track of student attendance, \nwhich has shown to be stressful, time-consuming, unreliable, incorrect, and inefficient, according",
+            "tokens": 27,
+            "page": 3,
+            "bbox": [
+                72,
+                556.474609375,
+                542.916015625,
+                707.751953125
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-59",
+            "text": "to Adetiba et al. [7]. Students will be individually identified and verified to take a test using \nbiometric technology in the same way. Unauthorized participation in an examination is \nprevented by verifying the behaviour features using a unique character like a fingerprint for each \nstudent.",
+            "tokens": 45,
+            "page": 4,
+            "bbox": [
+                72,
+                72.509765625,
+                539.531982421875,
+                127.1953125
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-60",
+            "text": "To authenticate a person, biometric systems, such as fingerprints or signatures, analyze physical \nand behavioural traits, such as those found in Jaiswal et al [8]. Studies suggest that exams are the \nmost prevalent tool around which the educational system revolves [9]. Most educational systems \nincorporate some evaluation as a way to gauge how effective the system is. It\u2019s a tool used to \ndetermine who gets to move forward on the academic ladder.",
+            "tokens": 72,
+            "page": 4,
+            "bbox": [
+                72,
+                141.705078125,
+                540.5999755859375,
+                361.9765625
+            ],
+            "confidence": 0.2
+        },
+        {
+            "id": "seg-61",
+            "text": "In reality, the grading system that \nall students are categorized into on a yearly or more regular basis is formed by exams and \nprofessor evaluations [10]. Using non-automated biometrics stretches back to human \ncivilization\u2019s earliest days when people started identifying one another based on physical or \nbehavioural features. Biometrics is not a new idea. It is the oldest type of identification being \nused today. According to Woodward et al.",
+            "tokens": 69,
+            "page": 4,
+            "bbox": [
+                72,
+                141.705078125,
+                540.5999755859375,
+                361.9765625
+            ],
+            "confidence": 0.2
+        },
+        {
+            "id": "seg-62",
+            "text": "[11], authentication via biometrics extends back over \na thousand years to the practice of East Asian potters who used their fingerprints to identify their \nproducts. In traditional China, handwritten signatures (chops) were used as an early form of \nbiometric identification, according to [9]. In 1882, Bertillon Systems measured their subjects\u2019 \nlength, arm length, and thumb and forefinger duration. The use of biometric data (in this \nexample, fingerprints) in criminal records was one of the earliest institutional uses of this \ntechnology.",
+            "tokens": 80,
+            "page": 4,
+            "bbox": [
+                72,
+                141.705078125,
+                540.5999755859375,
+                361.9765625
+            ],
+            "confidence": 0.2
+        },
+        {
+            "id": "seg-63",
+            "text": "Forensic scientists and law enforcement organizations\u2019 attempts to identify and categorize \noffenders in the late 19th and early twentieth century might be seen as the genesis of modern \nbiometric systems. Commercial biometric systems (usually dependent on hand geometry) \ndeveloped for use in physically accessing buildings in the 1960s and 1970s included (AFIS) \nautomatic fingerprint recognition system utilized by law enforcement organizations. Biometrics \nhave been used in computers for a few years now.",
+            "tokens": 72,
+            "page": 4,
+            "bbox": [
+                72,
+                404.28515625,
+                542.2319946289062,
+                555.5625
+            ],
+            "confidence": 0.2
+        },
+        {
+            "id": "seg-64",
+            "text": "Those designed with a certain purpose in mind \nbut lacked the versatility to work in various settings. Consequently, many people were forced to \nuse expensive solutions that they couldn\u2019t or didn\u2019t want to use. Although technology improved, \nbiometric solutions were generally acknowledged as viable alternatives to security solutions such \nas fraud control, security breaches, and human administrative mistakes; biometric technology \nexpanded [12].",
+            "tokens": 62,
+            "page": 4,
+            "bbox": [
+                72,
+                404.28515625,
+                542.2319946289062,
+                555.5625
+            ],
+            "confidence": 0.2
+        },
+        {
+            "id": "seg-65",
+            "text": "Also, biometrics\u2019 development has addressed the drawbacks of previous verification techniques. Biometrics may establish a person\u2019s identification based on who you are, rather than \u201cwhat you \nhave\u201d (like identity card) or \u201cwhat you recall (e.g., a password). There are now a variety of \nbiometric technologies in use to verify someone\u2019s identification. These include fingerprints, hand \ngeometry (iris and retina), face, facial thermograms, signature, palm print, and voice.",
+            "tokens": 67,
+            "page": 4,
+            "bbox": [
+                72,
+                570.072265625,
+                542.6041259765625,
+                679.953125
+            ],
+            "confidence": 0.2
+        },
+        {
+            "id": "seg-66",
+            "text": "Compared \nto more conventional security approaches, biometrics has an advantage since the data cannot be \nstolen or shared easily. Biometric solutions improve security and simplify users\u2019 lives by \neliminating creating and remembering complex passwords [13].",
+            "tokens": 35,
+            "page": 4,
+            "bbox": [
+                72,
+                570.072265625,
+                542.6041259765625,
+                679.953125
+            ],
+            "confidence": 0.2
+        },
+        {
+            "id": "seg-67",
+            "text": "1.2         Statement of the Problem",
+            "tokens": 5,
+            "page": 5,
+            "bbox": [
+                72,
+                72.509765625,
+                236.3280029296875,
+                85.798828125
+            ],
+            "confidence": 0.1
+        },
+        {
+            "id": "seg-68",
+            "text": "In most universities, student attendance identification is now done manually using paper, pencil, \nand other antiquated tools where students write or sign their names next to them. This technique \nis time-consuming and unproductive since it is sometimes difficult to update student records, \nstore and maintain such information, and calculate attendance percentages for test reasons. The \nmechanism used to identify student attendance does not track individual attendance records over \ntime [14].",
+            "tokens": 70,
+            "page": 5,
+            "bbox": [
+                72,
+                100.30859375,
+                538.248046875,
+                251.5859375
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-69",
+            "text": "Furthermore, since the essential data for these records are collected so that the \nmotivation for retaining student attendance records is undermined, data from these records are \noften fraudulent, inaccurate, and not legitimate. False attendance and impersonation are made \nextremely simple due to the present procedures utilized for obtaining and preserving data on \nstudent attendance. Students find it very easy to put their friends\u2019 identities on the attendance \nsheet without the teacher or any other official in charge detecting it.",
+            "tokens": 79,
+            "page": 5,
+            "bbox": [
+                72,
+                100.30859375,
+                538.248046875,
+                251.5859375
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-70",
+            "text": "In most cases, instructors have to deal with an empty classroom and an overflowing enrollment \nlist. In most cases, absentee students attend courses for the first few weeks before dropping out \nand ask their regular classmates to sign their absence slips for them. There isn\u2019t enough time for \nlecturers to go over the attendance list one by one since they are too busy lecturing and checking \nstudents in [15].",
+            "tokens": 69,
+            "page": 5,
+            "bbox": [
+                72,
+                266.095703125,
+                541.572021484375,
+                417.373046875
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-71",
+            "text": "Lack of an actual attendance list, as well as fraudulent attendance lists, have \nhuge ramifications. Teachers have a tough time identifying actual lecture attendees or compiling \naccurate data on student attendance for record-keeping because of the University\u2019s current \nineffectiveness at tracking students\u2019 attendance. Furthermore, with these inadequate student \nattendance-taking systems, impersonations during tests are also exceedingly difficult to detect. According to Stripling et al. [15], the consequences of non-attendance influence students\u2019 overall \nperformance and the classroom community as a whole.",
+            "tokens": 80,
+            "page": 5,
+            "bbox": [
+                72,
+                266.095703125,
+                541.572021484375,
+                417.373046875
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-72",
+            "text": "Class failure and instructor morale suffer when students fail to show up, and learning standards \nare lowered as a result. Additionally, class attendance decreases as the semester goes, especially \non certain days of the week like Friday, as the weekend approaches. When students forget or lose \ntheir examination cards during semester exams, neither the students nor the school officials have \nany physical proof that they had the requisite percentage of attendance to be permitted to sit for \nthe test.",
+            "tokens": 79,
+            "page": 5,
+            "bbox": [
+                72,
+                431.8828125,
+                542.219970703125,
+                624.556640625
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-73",
+            "text": "A fingerprint biometric identification system, on the other hand, might easily overcome \nthese minor difficulties, preventing many students from skipping exams. Olaniyi et al. [16]confirmed this. Candidates\u2019 decreased self-development abilities and confidence in reading \nand writing exams are being harmed by the rising occurrence of examination impersonation \namong students in higher education institutions.",
+            "tokens": 53,
+            "page": 5,
+            "bbox": [
+                72,
+                431.8828125,
+                542.219970703125,
+                624.556640625
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-74",
+            "text": "Despite many tactics used by stakeholders to \nguarantee that applicants complied with test standards, it had a detrimental impact on Nigeria\u2019s \neducational system [17] With the emphasis on certificates these days, students in Nigeria are \nmore likely to participate in criminal acts like skipping classes or boycotting school as a means \nof obtaining their desired outcomes.",
+            "tokens": 56,
+            "page": 5,
+            "bbox": [
+                72,
+                431.8828125,
+                542.219970703125,
+                624.556640625
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-75",
+            "text": "While authorities at the University have made concerted efforts to address issues such as a lack \nof effective student attendance records and student impersonation by, for example, providing \nattendance registers for roll calls, the threat persists, with disastrous results for students, the",
+            "tokens": 42,
+            "page": 5,
+            "bbox": [
+                72,
+                666.865234375,
+                531.89990234375,
+                707.751953125
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-76",
+            "text": "University, and society as a whole. That\u2019s why we carried out our research to create a biometric \nfingerprint that students can use. This study was undertaken to help us do just that.",
+            "tokens": 32,
+            "page": 6,
+            "bbox": [
+                72,
+                72.509765625,
+                534.8759765625,
+                99.59765625
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-77",
+            "text": "1.3 Study Objectives",
+            "tokens": 3,
+            "page": 6,
+            "bbox": [
+                72,
+                141.90625,
+                177.00001525878906,
+                155.1953125
+            ],
+            "confidence": 0.1
+        },
+        {
+            "id": "seg-78",
+            "text": "The major goal of this research was to create a design and implementation of the biometric-based \nattendance management system. The following specific aims have been devised to attain this \nprimary goal:",
+            "tokens": 31,
+            "page": 6,
+            "bbox": [
+                72,
+                169.705078125,
+                542.568115234375,
+                210.591796875
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-79",
+            "text": "1. Analyze the current method of student identification at the Akwa Ibom State University",
+            "tokens": 14,
+            "page": 6,
+            "bbox": [
+                90,
+                225.1015625,
+                532.2720947265625,
+                238.390625
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-80",
+            "text": "in Nigeria. 2. To create a biometric system that can be used with a biometric device to instantly identify",
+            "tokens": 19,
+            "page": 6,
+            "bbox": [
+                90,
+                238.900390625,
+                542.6041259765625,
+                265.98828125
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-81",
+            "text": "students\u2019 fingerprints at the Akwa Ibom State University,",
+            "tokens": 8,
+            "page": 6,
+            "bbox": [
+                108,
+                266.498046875,
+                383.3040466308594,
+                279.787109375
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-82",
+            "text": "iii. employ the method created to capture students\u2019 finger prints.",
+            "tokens": 10,
+            "page": 6,
+            "bbox": [
+                72,
+                294.296875,
+                404.29205322265625,
+                307.5859375
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-83",
+            "text": "1. Using data from both registered and unregistered students, evaluate the performance of",
+            "tokens": 13,
+            "page": 6,
+            "bbox": [
+                90,
+                322.095703125,
+                528.900146484375,
+                335.384765625
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-84",
+            "text": "the developed biometric system. 2. Using the system usability scale, determine the application\u2019s usability developed for use",
+            "tokens": 17,
+            "page": 6,
+            "bbox": [
+                90,
+                335.89453125,
+                534.2880859375,
+                362.982421875
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-85",
+            "text": "with a biometric device (SUS).",
+            "tokens": 5,
+            "page": 6,
+            "bbox": [
+                108,
+                363.4921875,
+                256.9800109863281,
+                376.78125
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-86",
+            "text": "1.4         Research Question",
+            "tokens": 3,
+            "page": 6,
+            "bbox": [
+                72,
+                419.08984375,
+                204.31202697753906,
+                432.37890625
+            ],
+            "confidence": 0.1
+        },
+        {
+            "id": "seg-87",
+            "text": "The implementation of the proposed system will answer the following research questions during \nthis study:",
+            "tokens": 15,
+            "page": 6,
+            "bbox": [
+                72,
+                446.888671875,
+                537.612060546875,
+                473.9765625
+            ],
+            "confidence": 0.1
+        },
+        {
+            "id": "seg-88",
+            "text": "1. What is Akwa Ibom State University\u2019s current student identification system? 2. How can a biometric system for instant identification of a student\u2019s fingerprint be",
+            "tokens": 25,
+            "page": 6,
+            "bbox": [
+                90,
+                488.486328125,
+                502.944091796875,
+                515.57421875
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-89",
+            "text": "developed?",
+            "tokens": 1,
+            "page": 6,
+            "bbox": [
+                108,
+                516.083984375,
+                162.64801025390625,
+                529.373046875
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-90",
+            "text": "iii. How can the developed system capture students\u2019 fingerprints use a biometric device at \nAkwa Ibom State University?",
+            "tokens": 18,
+            "page": 6,
+            "bbox": [
+                72,
+                543.8828125,
+                530.2559814453125,
+                570.970703125
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-91",
+            "text": "1. How can the developed biometric system\u2019s performance be assessed using the data that",
+            "tokens": 14,
+            "page": 6,
+            "bbox": [
+                90,
+                585.48046875,
+                530.2440185546875,
+                598.76953125
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-92",
+            "text": "included both enrolled and yet enrol students? 2. How can the usability of a developed application for use with a biometric device be",
+            "tokens": 23,
+            "page": 6,
+            "bbox": [
+                90,
+                599.279296875,
+                512.256103515625,
+                626.3671875
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-93",
+            "text": "calculated using the system usability scale (SUS)?",
+            "tokens": 7,
+            "page": 6,
+            "bbox": [
+                108,
+                626.876953125,
+                349.3080139160156,
+                640.166015625
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-94",
+            "text": "1.5         Significance of the study",
+            "tokens": 5,
+            "page": 6,
+            "bbox": [
+                72,
+                682.474609375,
+                233.6520233154297,
+                695.763671875
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-95",
+            "text": "The suggested method keeps a more efficient and precise student attendance record of \nidentifying absenteeism and impersonated students. Furthermore, the system processes \ninformation quicker and more simply than the current paper-based student attendance register. Aside from that, this technique will let lecturers take student attendance more successfully \nwithout worrying about losing or ruining their attendance papers as they pass them around the \nclass.",
+            "tokens": 63,
+            "page": 7,
+            "bbox": [
+                72,
+                72.509765625,
+                527.5679931640625,
+                154.79296875
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-96",
+            "text": "Furthermore, the system will enable institution administration to monitor students\u2019 class \nattendance in a specific course with low attendance, allowing management to correct the problem \nby giving relevant interventions. Imposters and impersonators will be unable to access \nexamination halls because of the system\u2019s high degree of security. The technology will save past \ndata using fingerprint biometrics, making it easier for instructors to access.",
+            "tokens": 63,
+            "page": 7,
+            "bbox": [
+                72,
+                169.302734375,
+                542.89208984375,
+                389.57421875
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-97",
+            "text": "Furthermore, the \nauthentication method benefits the institutions and lecturers and the students by eliminating the \ntension associated with waiting, which sometimes results in delays and, in some cases, damage \nto the attendance sheet. It also eliminates the errors and inconsistencies associated with manual \nsigning in, such as students who attend a class being registered as absent, resulting in the loss of \nthe mark assigned to that attendance owing to numerous attendance sheets.",
+            "tokens": 72,
+            "page": 7,
+            "bbox": [
+                72,
+                169.302734375,
+                542.89208984375,
+                389.57421875
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-98",
+            "text": "Fingerprint Based \nStudent Attendance Monitoring System is extremely useful in institutions, particularly during \nclasses and exams when heavy security is typically used to validate students\u2019 identities to detect \nimposters. By using the Verification System, the number of security personnel will be \nsignificantly reduced. Additionally, the suggested method tackles the issue of missing \nexamination attendance registers since information on students may be immediately created on \nthe spot using the provided system.",
+            "tokens": 70,
+            "page": 7,
+            "bbox": [
+                72,
+                169.302734375,
+                542.89208984375,
+                389.57421875
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-99",
+            "text": "1.6                     Scope of the Study",
+            "tokens": 5,
+            "page": 7,
+            "bbox": [
+                72,
+                431.8828125,
+                240.99600219726562,
+                445.171875
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-100",
+            "text": "A state-owned higher educational school, Akwa Ibom State University, was established in Uyo, \nthe capital city of Nigeria\u2019s Akwa Ibom state. A wide range of biometric approaches is available. The focus of this investigation will be on fingerprints. A biometric fingerprint identification \nsystem was developed using student biodata from Nigeria\u2019s School of Technology at Akwa Ibom \nState University. From August 2018 to September 2019, the research will be conducted.",
+            "tokens": 69,
+            "page": 7,
+            "bbox": [
+                72,
+                459.681640625,
+                542.6041259765625,
+                528.166015625
+            ],
+            "confidence": 0.3
+        }
+    ],
+    "ai_percent": 22.3,
+    "threshold": 0.5,
+    "created_at": 1764270454
+}

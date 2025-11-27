@@ -1,0 +1,60 @@
+{
+    "source_file": "D:\\Semester 05\\DF_Project\\backend\/uploads\/upload_6928a29c7c5b86.55410062_toCheck__2_.pdf",
+    "segments": [
+        {
+            "id": "seg-1",
+            "text": "200-Word Fully AI-Generated Essay",
+            "tokens": 4,
+            "page": 0,
+            "bbox": [
+                90.02400207519531,
+                72.60798645019531,
+                281.5,
+                85.8919906616211
+            ],
+            "confidence": 0.9
+        },
+        {
+            "id": "seg-2",
+            "text": "Modern technology has rapidly transformed the way societies function, creating a \nworld where information moves faster than individuals can fully process it. In recent \nyears, the expansion of artificial intelligence has been at the center of this \ntransformation, influencing communication, education, business, and even personal \ndecision-making. AI systems are increasingly used to analyze large datasets, automate \nrepetitive tasks, and produce insights that would be difficult for humans to generate \nwithin the same timeframe.",
+            "tokens": 73,
+            "page": 0,
+            "bbox": [
+                90.02400207519531,
+                99.96797180175781,
+                506.4620361328125,
+                334.3719787597656
+            ],
+            "confidence": 0.65
+        },
+        {
+            "id": "seg-3",
+            "text": "As a result, people have begun to rely on AI-driven tools \nfor convenience and efficiency, often without fully understanding how these systems \noperate behind the scenes. This reliance has raised new questions about privacy, \ntransparency, and the potential long-term consequences of integrating algorithmic \ndecision-making into everyday life. Supporters argue that AI has the potential to \nenhance productivity and unlock innovative solutions to complex problems, while \ncritics emphasize ethical risks and the loss of human autonomy.",
+            "tokens": 75,
+            "page": 0,
+            "bbox": [
+                90.02400207519531,
+                99.96797180175781,
+                506.4620361328125,
+                334.3719787597656
+            ],
+            "confidence": 0.68
+        },
+        {
+            "id": "seg-4",
+            "text": "Regardless of the \ndebate, it is clear that artificial intelligence will continue shaping the future, making it \nessential for individuals and institutions to develop a balanced perspective on its \ncapabilities and limitations. Understanding both the benefits and challenges of AI will \nbe crucial as societies move toward increasingly automated environments.",
+            "tokens": 50,
+            "page": 0,
+            "bbox": [
+                90.02400207519531,
+                99.96797180175781,
+                506.4620361328125,
+                334.3719787597656
+            ],
+            "confidence": 0.6
+        }
+    ],
+    "ai_percent": 70.75,
+    "threshold": 0.5,
+    "created_at": 1764270753
+}

@@ -36,8 +36,12 @@ if (!move_uploaded_file($upload['tmp_name'], $storedPath)) {
     Utils::error('Failed to store uploaded file', 500);
 }
 
-$pythonPath = dirname(__DIR__, 2) . '/python-worker/.venv/Scripts/python.exe';
-$python = new PythonBridge($pythonPath);
+$pythonBin = getenv('PYTHON_BIN') ?: (stripos(PHP_OS_FAMILY, 'Windows') !== false
+    ? dirname(__DIR__, 2) . '/python-worker/.venv/Scripts/python.exe'
+    : 'python'
+);
+
+$python = new PythonBridge($pythonBin);
 $extracted = $python->extract($storedPath, $segmentTokens);
 
 $segments = $extracted['segments'] ?? [];
@@ -58,6 +62,20 @@ $aiPercent = round($avgConfidence * 100, 2);
 $jobId = Utils::makeToken('job');
 $downloadToken = Utils::makeToken('dl');
 
+$jobsDir = dirname(__DIR__) . '/uploads/jobs';
+Utils::ensureDir($jobsDir);
+$jobFile = $jobsDir . '/' . $downloadToken . '.json';
+
+$jobPayload = [
+    'source_file' => $storedPath,
+    'segments' => $scoredSegments,
+    'ai_percent' => $aiPercent,
+    'threshold' => $threshold,
+    'created_at' => time(),
+];
+
+file_put_contents($jobFile, json_encode($jobPayload, JSON_PRETTY_PRINT));
+
 $response = [
     'job_id' => $jobId,
     'ai_percent' => $aiPercent,
@@ -72,4 +90,3 @@ $response = [
 ];
 
 Utils::jsonResponse($response);
-

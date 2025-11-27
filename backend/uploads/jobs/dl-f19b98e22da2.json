@@ -1,0 +1,242 @@
+{
+    "source_file": "D:\\Semester 05\\DF_Project\\backend\/uploads\/upload_6928a598d4dc35.07348048_toCheck__3_.pdf",
+    "segments": [
+        {
+            "id": "seg-1",
+            "text": "Artificial intelligence has become a major talking point in recent years, but people \ndon\u2019t always experience it in the same way. Some folks see AI as this huge, \nunstoppable force, while others honestly just encounter it casually, like when their \nphone suggests a reply or Netflix recommends a movie. And sometimes, the whole \nthing feels a bit exaggerated.",
+            "tokens": 58,
+            "page": 0,
+            "bbox": [
+                90.02400207519531,
+                72.12800598144531,
+                496.8480224609375,
+                168.48194885253906
+            ],
+            "confidence": 0.45
+        },
+        {
+            "id": "seg-2",
+            "text": "I mean, not every piece of tech is revolutionary \u2014 \nsometimes it\u2019s just annoying autocorrect that keeps changing \u201cpakora\u201d to something \ncompletely unrelated.",
+            "tokens": 23,
+            "page": 0,
+            "bbox": [
+                90.02400207519531,
+                72.12800598144531,
+                496.8480224609375,
+                168.48194885253906
+            ],
+            "confidence": 0.3
+        },
+        {
+            "id": "seg-3",
+            "text": "But at the same time, the rise of artificial intelligence undeniably represents one of the \nmost profound technological shifts of the modern era. Advanced machine learning \nmodels now possess the capacity to analyze complex datasets, identify intricate \npatterns, and generate insights that were previously beyond the reach of human \nanalysts working under time or resource constraints. This analytical capability has \nempowered industries across healthcare, finance, education, and logistics to adopt \ndata-driven decision-making at an unprecedented scale.",
+            "tokens": 76,
+            "page": 0,
+            "bbox": [
+                90.02400207519531,
+                182.79798889160156,
+                506.58001708984375,
+                279.1419982910156
+            ],
+            "confidence": 0.7
+        },
+        {
+            "id": "seg-4",
+            "text": "Still, on a daily level, most people don\u2019t think in such large terms. When someone \nuploads a picture and an app magically removes the background, they don\u2019t sit there \nreflecting on machine learning algorithms. They just think it\u2019s cool \u2014 or sometimes \nthey complain about the weird edges the tool leaves behind. There's a gap between \nwhat AI is capable of in theory and how ordinary people interact with it in small, \npractical ways.",
+            "tokens": 74,
+            "page": 0,
+            "bbox": [
+                90.02400207519531,
+                293.4880065917969,
+                497.2699890136719,
+                375.8919982910156
+            ],
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-5",
+            "text": "One consistent challenge is that AI systems are only as good as the data they\u2019ve been \ntrained on. This creates the possibility of bias, and honestly, sometimes you can see it \neven in small stuff. Like when maps apps send you through the most ridiculous \nnarrow streets just because the algorithm thinks it\u2019s \u201cefficient.\u201d Or when a job \nrecommendation algorithm keeps suggesting roles that have nothing to do with your \nskills.",
+            "tokens": 71,
+            "page": 0,
+            "bbox": [
+                90.02400207519531,
+                390.2279968261719,
+                506.12396240234375,
+                486.5719909667969
+            ],
+            "confidence": 0.55
+        },
+        {
+            "id": "seg-6",
+            "text": "These flaws make the entire thing feel a bit less magical and much more human \n\u2014 but not necessarily in a good way.",
+            "tokens": 23,
+            "page": 0,
+            "bbox": [
+                90.02400207519531,
+                390.2279968261719,
+                506.12396240234375,
+                486.5719909667969
+            ],
+            "confidence": 0.4
+        },
+        {
+            "id": "seg-7",
+            "text": "Yet, on the more technical and polished side, researchers emphasize that addressing \nalgorithmic bias requires deliberate engineering, transparent model-building practices, \nand continuous monitoring. Ethical AI development frameworks propose the \nintegration of fairness constraints, differential privacy techniques, and interpretability \nmethods such as model-agnostic explanations. These tools provide insights into how \nmodels operate internally, allowing developers and policymakers to identify \nunintended correlations and mitigate the propagation of systemic inequities.",
+            "tokens": 67,
+            "page": 0,
+            "bbox": [
+                90.02400207519531,
+                500.88800048828125,
+                507.0979919433594,
+                610.9219360351562
+            ],
+            "confidence": 0.65
+        },
+        {
+            "id": "seg-8",
+            "text": "In this \nsense, the pursuit of ethical AI is both a scientific and a moral endeavor.",
+            "tokens": 16,
+            "page": 0,
+            "bbox": [
+                90.02400207519531,
+                500.88800048828125,
+                507.0979919433594,
+                610.9219360351562
+            ],
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-9",
+            "text": "Meanwhile, people working in regular jobs mostly just care whether AI tools help \nthem or waste their time. A teacher grading assignments might appreciate an AI \nassistant summarizing answers, but they\u2019ll also complain when the summary \ncompletely misses the nuance of what the student wrote. A graphic designer might \nenjoy quick AI mockups but still prefer drawing the final details manually. Human \npreferences aren\u2019t always logical or efficient \u2014 sometimes people simply like doing \nthings themselves.",
+            "tokens": 76,
+            "page": 0,
+            "bbox": [
+                90.02400207519531,
+                625.2579345703125,
+                498.3599853515625,
+                721.6119384765625
+            ],
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-10",
+            "text": "Still, the efficiency of AI-powered automation cannot be overlooked. Automating \nrepetitive processes has drastically reduced human labor in data entry, customer",
+            "tokens": 21,
+            "page": 0,
+            "bbox": [
+                90.02400207519531,
+                735.9239501953125,
+                484.7620849609375,
+                762.887939453125
+            ],
+            "confidence": 0.55
+        },
+        {
+            "id": "seg-11",
+            "text": "support, inventory management, and pattern recognition tasks. Organizations can \nallocate more resources toward creative, strategic, or interpersonal responsibilities \nthat machines are not equipped to handle effectively. In many cases, AI tools have \nsupplemented human expertise rather than replacing it entirely, leading to hybrid \nworkflows that combine algorithmic precision with human intuition.",
+            "tokens": 51,
+            "page": 1,
+            "bbox": [
+                90.02400207519531,
+                72.12800598144531,
+                488.3240051269531,
+                140.88197326660156
+            ],
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-12",
+            "text": "But if we\u2019re being real, the biggest fear people have is losing their jobs. It\u2019s a concern \nthat isn\u2019t going away anytime soon. Workers in administrative roles especially feel \nnervous when they hear about AI chatbots handling customer support or about \nalgorithms scheduling employees more efficiently. Some younger people don\u2019t fear \nthe tech as much; they grew up with it. Older generations sometimes view it as \nsomething that\u2019s going to push them out.",
+            "tokens": 73,
+            "page": 1,
+            "bbox": [
+                90.02400207519531,
+                155.1979522705078,
+                504.77801513671875,
+                251.54200744628906
+            ],
+            "confidence": 0.5
+        },
+        {
+            "id": "seg-13",
+            "text": "The emotional side of technological change \nis a factor academic papers tend to overlook.",
+            "tokens": 14,
+            "page": 1,
+            "bbox": [
+                90.02400207519531,
+                155.1979522705078,
+                504.77801513671875,
+                251.54200744628906
+            ],
+            "confidence": 0.45
+        },
+        {
+            "id": "seg-14",
+            "text": "However, economists argue that the long-term impact of AI on labor markets is likely \nto follow historical patterns of technological disruption. While certain tasks become \nautomated, new categories of employment emerge \u2014 often centered around system \noversight, maintenance, and innovation. The challenge lies not in resisting the \ntechnology, but in facilitating workforce adaptation through reskilling programs, \nupdated educational curricula, and accessible training pathways. These structural \nadjustments allow societies to harness technological progress without leaving \nvulnerable populations behind.",
+            "tokens": 77,
+            "page": 1,
+            "bbox": [
+                90.02400207519531,
+                265.8580017089844,
+                504.60797119140625,
+                375.8919982910156
+            ],
+            "confidence": 0.65
+        },
+        {
+            "id": "seg-15",
+            "text": "At the personal level, people mix skepticism with convenience. Someone might \ncomplain endlessly about privacy concerns but still use AI assistants because they like \nthe reminders. Others talk about digital addiction while scrolling TikTok for hours. This shows how uneven and complicated the relationship between humans and AI \nreally is. It\u2019s messy, emotional, and sometimes contradictory.",
+            "tokens": 56,
+            "page": 1,
+            "bbox": [
+                90.02400207519531,
+                390.2279968261719,
+                506.8079528808594,
+                458.9519958496094
+            ],
+            "confidence": 0.55
+        },
+        {
+            "id": "seg-16",
+            "text": "Academically speaking, the integration of AI into daily life represents a shifting \nparadigm in human-computer interaction. The boundary between digital and physical \nexperience has thinned considerably, introducing new modes of cognition where \nindividuals depend on algorithmic systems for memory enhancement, predictive \nsuggestions, entertainment filtering, and decision scaffolding. As the sophistication of \ngenerative models increases, the distinctions between human-generated and machine-\ngenerated content blur, raising urgent questions about authorship, authenticity, and the \nnature of creative expression.",
+            "tokens": 75,
+            "page": 1,
+            "bbox": [
+                90.02400207519531,
+                473.2879943847656,
+                507.3121337890625,
+                583.3219604492188
+            ],
+            "confidence": 0.7
+        },
+        {
+            "id": "seg-17",
+            "text": "Whether people think deeply about these questions or not, AI is going to continue \ninfluencing nearly everything. Some developments will feel exciting, others will feel \ninvasive, and some will be so normal we stop noticing them. The world isn\u2019t heading \ntoward a fully robotic future nor staying entirely human-driven \u2014 it\u2019s moving toward \na hybrid space where people and algorithms constantly interact, argue, adapt, and \nlearn from each other.",
+            "tokens": 69,
+            "page": 1,
+            "bbox": [
+                90.02400207519531,
+                597.637939453125,
+                504.9380187988281,
+                680.0619506835938
+            ],
+            "confidence": 0.6
+        },
+        {
+            "id": "seg-18",
+            "text": "Understanding that mixed reality \u2014 where AI is neither hero nor villain \u2014 is \nprobably the most human thing about this entire technological evolution.",
+            "tokens": 24,
+            "page": 1,
+            "bbox": [
+                90.02400207519531,
+                694.3779296875,
+                464.4499816894531,
+                721.8519897460938
+            ],
+            "confidence": 0.5
+        }
+    ],
+    "ai_percent": 54.17,
+    "threshold": 0.5,
+    "created_at": 1764271521
+}
