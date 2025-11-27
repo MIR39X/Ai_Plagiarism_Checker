@@ -1,4 +1,46 @@
 {
-  \"job_id\": \"mock\",
-  \"segments\": []
+  "job_id": "mock-123",
+  "ai_percent": 42.5,
+  "total_tokens": 320,
+  "num_segments": 4,
+  "threshold": 0.5,
+  "segments": [
+    {
+      "id": "seg-1",
+      "text": "This is a short introduction to demonstrate the mock API response.",
+      "confidence": 0.78,
+      "tokens": 12,
+      "page": 0,
+      "bbox": [10, 20, 200, 40],
+      "is_ai": true
+    },
+    {
+      "id": "seg-2",
+      "text": "Here is another segment that looks more human-written for variety.",
+      "confidence": 0.32,
+      "tokens": 11,
+      "page": 0,
+      "bbox": [12, 60, 210, 80],
+      "is_ai": false
+    },
+    {
+      "id": "seg-3",
+      "text": "Technical description about system architecture and data flow.",
+      "confidence": 0.65,
+      "tokens": 10,
+      "page": 1,
+      "bbox": [15, 120, 220, 150],
+      "is_ai": true
+    },
+    {
+      "id": "seg-4",
+      "text": "Concluding remarks and suggested future work for the project.",
+      "confidence": 0.18,
+      "tokens": 10,
+      "page": 1,
+      "bbox": [18, 180, 230, 210],
+      "is_ai": false
+    }
+  ],
+  "download_token": "dl-mock"
 }

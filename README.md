@@ -150,6 +150,12 @@ curl -X POST "http://localhost:8000/analyze.php" \
 ### Mock Endpoint
 `http://localhost:8000/mock.php`
 
+## Frontend (simple static page)
+- Open `frontend/simple/index.html` in your browser.
+- Choose endpoint: **Mock** (no cost) or **Analyze** (uses your API key).
+- Select a PDF/DOCX and click **Run Analysis**. Results show AI%, segment list, and confidences.
+- Debugging: a debug panel at the bottom shows raw responses/errors. Backend runs at `http://127.0.0.1:8000` (start from `backend/public` with `php -S 127.0.0.1:8000`).
+
 ### Frontend
 - Open `frontend/simple/index.html`, or
 - Run React at `http://localhost:3000`
