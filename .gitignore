@@ -1,2 +1,5 @@
 backend/.env
 session-notes.txt
+python-worker/.venv/
+__pycache__/
+*.pyc

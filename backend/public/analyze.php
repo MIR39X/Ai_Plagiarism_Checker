@@ -36,7 +36,8 @@ if (!move_uploaded_file($upload['tmp_name'], $storedPath)) {
     Utils::error('Failed to store uploaded file', 500);
 }
 
-$python = new PythonBridge();
+$pythonPath = dirname(__DIR__, 2) . '/python-worker/.venv/Scripts/python.exe';
+$python = new PythonBridge($pythonPath);
 $extracted = $python->extract($storedPath, $segmentTokens);
 
 $segments = $extracted['segments'] ?? [];

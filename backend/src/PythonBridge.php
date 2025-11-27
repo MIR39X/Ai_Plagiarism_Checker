@@ -18,7 +18,7 @@ class PythonBridge
     {
         $cmd = sprintf(
             '%s %s --file %s --segment-tokens %d',
-            escapeshellcmd($this->pythonBinary),
+            escapeshellarg($this->pythonBinary),
             escapeshellarg($this->extractorPath),
             escapeshellarg($filePath),
             $segmentTokens

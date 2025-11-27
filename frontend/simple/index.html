@@ -5,94 +5,113 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AI Plagiarism Checker</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background:#0f172a; color:#e2e8f0; }
-    header { padding: 1.5rem; background: linear-gradient(135deg,#0ea5e9,#6366f1); color:#0b1120; }
-    main { padding: 1.5rem; max-width: 1100px; margin: 0 auto; }
-    .card { background:#111827; border:1px solid #1f2937; border-radius:12px; padding:1.25rem; margin-bottom:1rem; box-shadow:0 10px 30px rgba(0,0,0,0.35); }
-    label { display:block; margin-bottom:0.35rem; color:#cbd5e1; }
-    input[type="file"], select, input[type="number"], button { width:100%; padding:0.65rem; border-radius:8px; border:1px solid #1f2937; background:#0b1220; color:#e2e8f0; }
-    button { cursor:pointer; background:#22d3ee; color:#0b1120; font-weight:700; border:none; transition:transform 0.1s ease, box-shadow 0.2s; }
-    button:hover { box-shadow:0 10px 30px rgba(34,211,238,0.2); transform:translateY(-1px); }
-    .grid { display:grid; gap:1rem; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); }
-    .pill { display:inline-block; padding:0.2rem 0.55rem; border-radius:999px; font-size:0.8rem; font-weight:700; }
-    .pill.ai { background:#f87171; color:#0b1120; }
-    .pill.human { background:#34d399; color:#0b1120; }
-    .small { font-size:0.85rem; color:#94a3b8; }
-    pre { white-space:pre-wrap; word-break:break-word; background:#0b1220; padding:0.75rem; border-radius:8px; border:1px solid #1f2937; }
-    .flex { display:flex; gap:0.5rem; align-items:center; flex-wrap:wrap; }
-    .row { display:flex; gap:1rem; flex-wrap:wrap; }
+    :root {
+      --bg: #050914;
+      --panel: #0c1222;
+      --border: #1c2538;
+      --text: #e8ecf5;
+      --muted: #9ba7bf;
+      --accent: #21d4fd;
+      --accent2: #6b8bff;
+      --ai: #f87171;
+      --human: #34d399;
+    }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: "Inter", Arial, sans-serif; background: var(--bg); color: var(--text); }
+    header { padding: 32px 20px; background: linear-gradient(120deg, var(--accent), var(--accent2)); color: #041227; }
+    header h1 { margin: 0 0 8px; font-size: 32px; }
+    header p { margin: 0; font-weight: 600; color: #05142d; }
+    main { max-width: 1200px; margin: 0 auto; padding: 24px 20px 60px; }
+    .card { background: var(--panel); border: 1px solid var(--border); border-radius: 16px; padding: 18px; box-shadow: 0 10px 30px rgba(0,0,0,0.35); margin-bottom: 16px; }
+    label { display:block; margin-bottom:6px; color: var(--muted); font-weight:600; }
+    input[type="file"], select, input[type="number"] { width:100%; padding:12px; border-radius:10px; border:1px solid var(--border); background:#0a1120; color: var(--text); }
+    button { padding:12px 16px; border-radius:10px; border:none; font-weight:700; cursor:pointer; background: var(--accent); color:#041227; transition: transform 0.1s ease, box-shadow 0.2s; }
+    button:hover { box-shadow:0 12px 30px rgba(33,212,253,0.25); transform: translateY(-1px); }
+    button:disabled { opacity:0.6; cursor:not-allowed; box-shadow:none; transform:none; }
+    .grid { display:grid; gap:14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); align-items: center; }
+    .row { display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+    .pill { display:inline-block; padding:4px 10px; border-radius:999px; font-size:12px; font-weight:700; }
+    .pill.ai { background: var(--ai); color:#0b1120; }
+    .pill.human { background: var(--human); color:#0b1120; }
+    .small { font-size: 13px; color: var(--muted); }
+    pre { background:#0a1120; border:1px solid var(--border); border-radius:12px; padding:12px; white-space:pre-wrap; word-break:break-word; color:#cbd5f1; }
+    h2 { margin:0 0 10px; }
+    .layout-split { display:grid; grid-template-columns: 320px 1fr; gap:16px; align-items:start; }
+    @media (max-width: 900px) { .layout-split { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
   <header>
     <h1>AI Plagiarism Checker</h1>
-    <p class="small" style="color:#0b1120;font-weight:700;">Upload a PDF/DOCX, choose mock or live analyze, and view per-segment confidences.</p>
+    <p>Upload a PDF/DOCX, choose mock or live analyze, and view per-segment confidences.</p>
   </header>
+
   <main>
-    <div class="card">
+    <section class="card">
       <div class="grid">
         <div>
           <label for="file">Document</label>
           <input type="file" id="file" accept=".pdf,.doc,.docx" />
         </div>
         <div>
-          <label for="mode">Endpoint</label>
-          <select id="mode">
-            <option value="mock">Mock (no cost)</option>
-            <option value="analyze">Analyze (live API)</option>
-          </select>
-        </div>
-        <div>
           <label for="segmentTokens">Segment tokens (optional)</label>
           <input type="number" id="segmentTokens" min="20" max="400" placeholder="default 80" />
         </div>
       </div>
-      <div style="margin-top:1rem;" class="row">
-        <button id="submit" type="button" style="max-width:220px;">Run Analysis</button>
+      <div class="row" style="margin-top:14px;">
+        <button id="submit" type="button" style="min-width:180px;">Run Analysis</button>
         <span id="status" class="small"></span>
+        <button id="toggleDebug" type="button" style="background:transparent;color:var(--muted);border:1px solid var(--border);">Toggle Debug</button>
       </div>
-    </div>
+    </section>
 
-    <div class="card" id="summary" style="display:none;">
+    <section class="card" id="summary" style="display:none;">
       <h2>Summary</h2>
-      <div class="grid">
+      <div class="layout-split">
         <div>
-          <div class="small">AI Percentage</div>
-          <div id="aiPercent" style="font-size:1.8rem;font-weight:800;">--</div>
+          <canvas id="aiChart" width="240" height="240" style="width:100%; height:auto;"></canvas>
         </div>
-        <div>
-          <div class="small">Segments</div>
-          <div id="numSegments" style="font-size:1.4rem;font-weight:700;">--</div>
-        </div>
-        <div>
-          <div class="small">Total Tokens</div>
-          <div id="totalTokens" style="font-size:1.4rem;font-weight:700;">--</div>
-        </div>
-        <div>
-          <div class="small">Download Token</div>
-          <div id="downloadToken" style="font-size:1.1rem;font-weight:600;">--</div>
+        <div class="grid">
+          <div>
+            <div class="small">AI Percentage</div>
+            <div id="aiPercent" style="font-size:28px;font-weight:800;">--</div>
+          </div>
+          <div>
+            <div class="small">Segments</div>
+            <div id="numSegments" style="font-size:22px;font-weight:700;">--</div>
+          </div>
+          <div>
+            <div class="small">Total Tokens</div>
+            <div id="totalTokens" style="font-size:22px;font-weight:700;">--</div>
+          </div>
+          <div>
+            <div class="small">Download Token</div>
+            <div id="downloadToken" style="font-size:16px;font-weight:600;">--</div>
+            <button id="downloadBtn" type="button" style="margin-top:6px;min-width:160px;">Download (placeholder)</button>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="card" id="segments" style="display:none;">
+    <section class="card" id="segments" style="display:none;">
       <h2>Segments</h2>
       <div id="segmentList" class="grid"></div>
-    </div>
+    </section>
+
+    <section class="card" id="debugSection">
+      <h2 style="margin-bottom:8px;">Debug (raw responses & errors)</h2>
+      <pre id="debug">No debug yet.</pre>
+    </section>
   </main>
-  <div id="debugWrapper" style="max-width:1100px;margin:0 auto 2rem;">
-    <div class="small" style="margin-bottom:0.5rem;">Debug (raw responses & errors)</div>
-    <pre id="debug" class="small" style="min-height:80px;">No debug yet.</pre>
-  </div>
 
   <script>
-    // Point to the PHP backend. If you're viewing this over a different port (e.g., 5500), we still target 8000 for the API.
-    const API_BASE = `${window.location.protocol}//${window.location.hostname}:8000`;
+    const API_BASE = 'http://127.0.0.1:8000';
+
     const fileInput = document.getElementById('file');
-    const modeSelect = document.getElementById('mode');
     const segmentTokensInput = document.getElementById('segmentTokens');
     const statusEl = document.getElementById('status');
     const submitBtn = document.getElementById('submit');
+    const toggleDebugBtn = document.getElementById('toggleDebug');
     const summaryCard = document.getElementById('summary');
     const segmentsCard = document.getElementById('segments');
     const aiPercentEl = document.getElementById('aiPercent');
@@ -101,13 +120,25 @@
     const downloadTokenEl = document.getElementById('downloadToken');
     const segmentListEl = document.getElementById('segmentList');
     const debugEl = document.getElementById('debug');
+    const downloadBtn = document.getElementById('downloadBtn');
+    const aiChartEl = document.getElementById('aiChart');
 
-    submitBtn.addEventListener('click', async (evt) => {
-      evt.preventDefault();
+    let debugVisible = true;
+    let aiChartCtx = aiChartEl.getContext('2d');
+
+    function setDebug(text) {
+      debugEl.textContent = text;
+    }
+
+    toggleDebugBtn.addEventListener('click', () => {
+      debugVisible = !debugVisible;
+      document.getElementById('debugSection').style.display = debugVisible ? 'block' : 'none';
+    });
+
+    submitBtn.addEventListener('click', async () => {
       const file = fileInput.files[0];
-      const mode = modeSelect.value;
-      if (!file && mode === 'analyze') {
-        statusEl.textContent = 'Choose a PDF/DOCX file for analyze.';
+      if (!file) {
+        statusEl.textContent = 'Choose a PDF/DOCX file.';
         return;
       }
       submitBtn.disabled = true;
@@ -115,63 +146,38 @@
       summaryCard.style.display = 'none';
       segmentsCard.style.display = 'none';
       segmentListEl.innerHTML = '';
-      debugEl.textContent = 'Running...';
-
-      console.log('API_BASE', API_BASE, 'mode', mode);
+      setDebug('Running...');
+      document.getElementById('debugSection').style.display = 'block';
 
       try {
         let data;
-        if (mode === 'mock') {
-          const res = await fetch(`${API_BASE}/mock.php`);
-          const raw = await res.text();
-          debugEl.textContent = `Mock raw response:\n${raw}`;
-          if (!res.ok) throw new Error(raw || 'Mock request failed');
-          try {
-            data = JSON.parse(raw);
-          } catch (e) {
-            throw new Error('Mock parse failed: ' + raw.slice(0, 200));
-          }
-        } else {
-          const form = new FormData();
-          form.append('file', file);
-          const tokens = segmentTokensInput.value;
-          if (tokens) form.append('segment_tokens', tokens);
-          const res = await fetch(`${API_BASE}/analyze.php`, { method: 'POST', body: form });
-          const raw = await res.text();
-          debugEl.textContent = `Analyze raw response:\n${raw}`;
-          if (!res.ok) {
-            let msg = raw || 'Analyze request failed';
-            try {
-              const errJson = JSON.parse(raw);
-              msg = errJson.error || JSON.stringify(errJson);
-            } catch (e) {
-              // keep raw
-            }
-            throw new Error(msg);
-          }
-          try {
+        const form = new FormData();
+        form.append('file', file);
+        const tokens = segmentTokensInput.value;
+        if (tokens) form.append('segment_tokens', tokens);
+        const res = await fetch(`${API_BASE}/analyze.php`, { method: 'POST', body: form, cache: 'no-cache' });
+        const raw = await res.text();
+        setDebug(`Analyze raw response:\n${raw}`);
+        if (!res.ok) {
+          let msg = raw || 'Analyze request failed';
+          try { const errJson = JSON.parse(raw); msg = errJson.error || JSON.stringify(errJson); } catch (e) {}
+          throw new Error(msg);
+        }
+        try {
           data = JSON.parse(raw);
-          } catch (e) {
-            throw new Error('Analyze parse failed: ' + raw.slice(0, 200));
-          }
+        } catch (e) {
+          throw new Error('Analyze parse failed');
         }
 
         renderResults(data);
         statusEl.textContent = 'Done';
       } catch (err) {
         statusEl.textContent = 'Error: ' + err.message;
+        setDebug((debugEl.textContent || '') + `\nError: ${err.message}`);
         console.error(err);
-        debugEl.textContent += `\nError: ${err.message}`;
       } finally {
         submitBtn.disabled = false;
       }
-    });
-
-    // Surface uncaught errors to the page for easier debugging
-    window.addEventListener('error', (e) => {
-      statusEl.textContent = 'Error: ' + e.message;
-      debugEl.style.display = 'block';
-      debugEl.textContent = 'Window error: ' + e.message;
     });
 
     function renderResults(data) {
@@ -179,7 +185,14 @@
       numSegmentsEl.textContent = data.num_segments ?? '--';
       totalTokensEl.textContent = data.total_tokens ?? '--';
       downloadTokenEl.textContent = data.download_token ?? '--';
+      downloadBtn.onclick = () => {
+        if (data.download_token) {
+          window.open(`${API_BASE}/download.php?token=${encodeURIComponent(data.download_token)}`);
+        }
+      };
       summaryCard.style.display = 'block';
+
+      drawChart(Number(data.ai_percent) || 0);
 
       segmentListEl.innerHTML = '';
       (data.segments || []).forEach(seg => {
@@ -187,17 +200,54 @@
         card.className = 'card';
         const pillClass = seg.is_ai ? 'pill ai' : 'pill human';
         card.innerHTML = `
-          <div class="flex" style="justify-content:space-between;">
+          <div class="row" style="justify-content:space-between;">
             <div class="small">${seg.id || ''} · Page ${seg.page ?? '-'} · Tokens ${seg.tokens ?? '-'}</div>
             <span class="${pillClass}">${seg.is_ai ? 'AI' : 'Human'} (${seg.confidence ?? 0})</span>
           </div>
-          <pre>${seg.text || ''}</pre>
+          <pre style="margin-top:8px;">${seg.text || ''}</pre>
         `;
         segmentListEl.appendChild(card);
       });
 
       segmentsCard.style.display = 'block';
     }
+
+    function drawChart(aiPercent) {
+      const percent = Math.max(0, Math.min(100, aiPercent));
+      const angle = (percent / 100) * Math.PI * 2;
+      const ctx = aiChartCtx;
+      const size = aiChartEl.width;
+      const center = size / 2;
+      const radius = center - 14;
+      ctx.clearRect(0,0,size,size);
+      ctx.lineWidth = 18;
+      ctx.strokeStyle = '#1f2937';
+      ctx.beginPath(); ctx.arc(center, center, radius, 0, Math.PI * 2); ctx.stroke();
+      ctx.strokeStyle = '#f87171';
+      ctx.beginPath(); ctx.arc(center, center, radius, -Math.PI/2, -Math.PI/2 + angle); ctx.stroke();
+      ctx.fillStyle = '#e2e8f0';
+      ctx.font = 'bold 18px Arial';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(`${percent}% AI`, center, center);
+    }
+
+    // Show debug by default
+    document.getElementById('debugSection').style.display = 'block';
+
+    window.addEventListener('error', (e) => {
+      statusEl.textContent = 'Error: ' + e.message;
+      document.getElementById('debugSection').style.display = 'block';
+      setDebug('Window error: ' + e.message);
+    });
+
+    window.addEventListener('unhandledrejection', (e) => {
+      const msg = e.reason?.message || e.reason || 'Unhandled rejection';
+      statusEl.textContent = 'Error: ' + msg;
+      document.getElementById('debugSection').style.display = 'block';
+      setDebug('Unhandled rejection: ' + msg);
+    });
+
   </script>
 </body>
 </html>
